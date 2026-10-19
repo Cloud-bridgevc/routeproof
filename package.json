@@ -1,0 +1,16 @@
+{
+  "name": "routeproof",
+  "version": "0.1.0",
+  "description": "RouteProof \u2014 field-service verification and evidence management (demo build).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/server.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch server/server.js",
+    "reset": "node --disable-warning=ExperimentalWarning server/server.js --reset-only",
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

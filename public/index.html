@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RouteProof — Field-service verification and evidence management</title>
+  <meta name="description" content="RouteProof turns technician checklists, notes and photos into organized service records, flags missing evidence, and produces customer-ready reports.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/css/report.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f7bff'/%3E%3Cpath d='M9 17l5 5 9-11' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body class="site">
+  <div class="demo-ribbon"><strong>Product demonstration.</strong> All customers, technicians and service records on this site are fictional. AWS and HubSpot integrations are simulated in this build.</div>
+
+  <header class="site-nav">
+    <div class="wrap">
+      <a class="logo" href="/"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4 10-11"/></svg></span>RouteProof</a>
+      <nav>
+        <a href="#use-cases">Use cases</a>
+        <a href="#how">How it works</a>
+        <a href="#demo">Live demo</a>
+        <a href="#integrity">Evidence integrity</a>
+        <a href="#platform">Platform</a>
+      </nav>
+      <div class="cta">
+        <a class="btn btn-ghost btn-sm" href="/app">Open dashboard</a>
+        <a class="btn btn-primary btn-sm" href="#contact">Request a demo</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Field-service verification</span>
+        <h1>Every job, documented.<br><em>Every claim, traceable.</em></h1>
+        <p class="lead">RouteProof turns technician checklists, notes and photos into an organized service record, flags what's missing before the truck leaves, and produces reports your customers can trust — with a clear line between evidence submitted and work verified.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#demo">Try the interactive demo</a>
+          <a class="btn btn-ghost" href="/tech">Open technician app</a>
+        </div>
+        <div class="hero-points"><span>Checklist completeness</span><span>Exception detection</span><span>Dispute-ready history</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone"><div class="screen">
+          <h5>WO-1045 · Pest control</h5><span style="color:#64748b">Harborview — Westside</span>
+          <div class="row"><span class="chk on">✓</span><div>Entry points inspected<small>Photo · 9:12 AM</small></div></div>
+          <div class="row"><span class="chk on">✓</span><div>Bait stations serviced<small>Note · 12 stations</small></div></div>
+          <div class="row miss"><span class="chk"></span><div>Perimeter treatment<small style="color:#dc2626">Photo required</small></div></div>
+          <div class="row"><span class="chk"></span><div>Recommendations</div></div>
+          <div class="row"><span class="chk"></span><div>Customer sign-off</div></div>
+        </div></div>
+        <div class="report-float">
+          <div class="rh"><b>Service report</b><span class="badge warn">Draft</span></div>
+          <div class="bar w85"></div><div class="bar w70"></div><div class="bar w50"></div>
+          <div class="thumbs"><div></div><div></div><div></div></div>
+          <div class="bar w70"></div><div class="bar w50"></div>
+        </div>
+        <div class="flag-float"><b>2 items missing</b> before this record can be reviewed: perimeter photo, customer sign-off.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="use-cases">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Built for service operators</span>
+        <h2>One verification model, tuned to each trade</h2>
+        <p>Service templates define what a complete job record looks like — required steps, required photos, required notes and sign-off rules — so every visit is checked against the same standard.</p>
+      </div>
+      <div class="usecases">
+        <article class="usecase">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>Commercial cleaning</h3>
+          <p>Prove scope coverage across floors, restrooms and break areas on night shifts with no one on site.</p>
+          <ul><li>Room-by-room before/after evidence</li><li>Supply restock logs</li><li>"No one on site" sign-off reasons</li></ul>
+        </article>
+        <article class="usecase">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="5"/><path d="M12 8V5M8 9L5 6M16 9l3-3M7 13H3M21 13h-4M8 17l-3 3M16 17l3 3"/></svg></div>
+          <h3>Pest control</h3>
+          <p>Capture station counts, product and EPA registration details, and exclusion recommendations every visit.</p>
+          <ul><li>Required treatment fields</li><li>Station activity trends</li><li>Audit-ready service history</li></ul>
+        </article>
+        <article class="usecase">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h4M7 14h10M16 10h1"/></svg></div>
+          <h3>Facility maintenance</h3>
+          <p>Record equipment nameplates, readings and part replacements for preventive maintenance contracts.</p>
+          <ul><li>Nameplate and serial capture</li><li>Reading extraction from notes</li><li>Per-asset service history</li></ul>
+        </article>
+        <article class="usecase">
+          <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></div>
+          <h3>Repair &amp; trades</h3>
+          <p>Document the reported issue, diagnosis, repair and test — then answer callbacks with the full record.</p>
+          <ul><li>Diagnosis and test notes</li><li>Duplicate-photo detection</li><li>Dispute investigation timeline</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From the van to a verified record</h2>
+        <p>AI organizes and checks. People verify. Every step is logged with who did it and when.</p>
+      </div>
+      <div class="flow">
+        <div><h4>Capture</h4><p>Technicians work through a mobile checklist, add notes and photos, and collect sign-off. Times come from the server clock, not the device.</p></div>
+        <div><h4>Organize</h4><p>Record understanding maps free-text notes and untagged photos onto checklist steps and classifies each file by stage.</p></div>
+        <div><h4>Check</h4><p>Completeness analysis and exception detection flag missing photos, notes, sign-offs and inconsistent timestamps.</p></div>
+        <div><h4>Review</h4><p>An operations reviewer approves or rejects evidence and verifies the record — or sends it back with a request.</p></div>
+        <div><h4>Report</h4><p>A customer-ready report is generated from approved evidence only, clearly marked Draft until a reviewer signs off.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="demo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Interactive demonstration</span>
+        <h2>Watch a messy job submission become a service report</h2>
+        <p>A fictional pest-control visit with real-world gaps. Step through what the technician sent, how RouteProof organizes and checks it, how missing evidence gets resolved, and how the report is prepared.</p>
+      </div>
+      <div class="demo-shell">
+        <div class="demo-top">
+          <span class="badge demo">Demo data · fictional</span>
+          <strong>WO-DEMO-7 · Restaurant Pest Control</strong>
+          <span class="who">Alex Moreno (fictional technician) · Bluebird Café (fictional customer)</span>
+          <button class="btn btn-sm btn-ghost" id="demo-restart" style="margin-left:auto;color:#fff;border-color:rgba(255,255,255,.25)">Restart</button>
+        </div>
+        <div class="demo-steps" id="demo-steps" role="tablist"></div>
+        <div class="demo-body" id="demo-body"></div>
+      </div>
+      <p class="muted small" style="margin-top:12px">Times in this demo are simulated relative to your clock. Anything you add is stamped with your actual current time. Classification and summaries here use RouteProof's built-in rules engine, standing in for Amazon Bedrock.</p>
+    </div>
+  </section>
+
+  <section class="band" id="integrity">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Evidence integrity</span>
+        <h2>Submitted evidence is not verified completion</h2>
+        <p>A photo shows what a camera saw at one moment. It doesn't prove a job was done correctly. RouteProof keeps these states separate everywhere — in the app, in reports and in disputes.</p>
+      </div>
+      <div class="ladder">
+        <div><span class="lv" style="color:var(--slate-500)">Level 1</span><h4>Submitted</h4><p>The technician entered checklist items, notes and files. Nothing has been checked yet.</p></div>
+        <div><span class="lv" style="color:var(--info)">Level 2</span><h4>Checked</h4><p>Automated analysis found the record complete against its template, or listed what's missing.</p></div>
+        <div><span class="lv" style="color:var(--warn)">Level 3</span><h4>Evidence reviewed</h4><p>A named reviewer approved or rejected each file. Only approved files reach customer reports.</p></div>
+        <div><span class="lv" style="color:var(--ok)">Level 4</span><h4>Verified</h4><p>A named reviewer confirmed the documentation is complete. That's a records check, not a site inspection.</p></div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <h3>What RouteProof will never do</h3>
+          <ul>
+            <li>Invent a timestamp. A missing capture time shows as "not available."</li>
+            <li>Fill in a signature or customer approval that wasn't captured.</li>
+            <li>Mark a record verified on its own. AI flags; people decide.</li>
+            <li>Treat a photo as proof that work met spec.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>What it records instead</h3>
+          <ul>
+            <li>Server-side times for check-in, each step, notes, uploads and sign-off.</li>
+            <li>Device-reported capture times, labeled as device metadata.</li>
+            <li>File fingerprints (SHA-256) to spot the same photo reused across jobs.</li>
+            <li>Every reviewer decision, with name, time and reason.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark" id="platform">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Platform</span>
+        <h2>Built on AWS, connected to your CRM</h2>
+        <p>Evidence lives in private S3 storage, job records in an embedded SQLite database, and AI runs in Amazon Bedrock inside your AWS account boundary.</p>
+      </div>
+      <div class="arch">
+        <div class="col">
+          <div class="node"><span class="tag">Clients</span><h5>Technician mobile app</h5><p>Offline-tolerant checklist, camera, signature capture.</p></div>
+          <div class="node"><span class="tag">Clients</span><h5>Operations dashboard</h5><p>Work orders, verification queue, disputes, reports.</p></div>
+          <div class="node"><span class="tag">CRM</span><h5>HubSpot</h5><p>Demo requests, sales pipeline, onboarding and customer sync.</p></div>
+        </div>
+        <div class="col">
+          <div class="node core"><span class="tag">Core</span><h5>RouteProof API</h5><p>Work orders, checklist rules, verification engine, audit log.</p></div>
+          <div class="node"><span class="tag">Database</span><h5>SQLite</h5><p>Customers, locations, work orders, checklist entries, evidence metadata, reviews, disputes. Append-only evidence tables, continuously backed up to S3.</p></div>
+        </div>
+        <div class="col">
+          <div class="node"><span class="tag">Storage</span><h5>Amazon S3</h5><p>Private evidence bucket, SHA-256 checksums, presigned access, object lock option.</p></div>
+          <div class="node"><span class="tag">AI</span><h5>Amazon Bedrock</h5><p>Evidence classification, record summaries, recurring-issue narratives.</p></div>
+          <div class="node"><span class="tag">Compute</span><h5>AWS Lambda</h5><p>Report generation (PDF) and notifications via SES / SNS.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band cta-band" id="contact">
+    <div class="wrap cta-grid">
+      <div>
+        <span class="eyebrow">Get started</span>
+        <h2 style="font-size:2.2rem;letter-spacing:-.03em">See RouteProof with your own service templates</h2>
+        <p style="color:var(--slate-300)">Tell us about your team. We'll set up your checklists and walk through the verification workflow with your ops lead.</p>
+        <p class="small" style="color:var(--slate-400)">In this demo build the form saves your request locally and logs a <em>simulated</em> HubSpot contact and deal. Nothing is sent to HubSpot.</p>
+        <p style="margin-top:24px"><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.25)" href="/app">Explore the dashboard →</a></p>
+      </div>
+      <form class="card" id="lead-form" novalidate>
+        <div class="form-grid">
+          <label class="field">Name<input type="text" name="name" autocomplete="name"></label>
+          <label class="field">Work email *<input type="email" name="email" required autocomplete="email"></label>
+          <label class="field">Company *<input type="text" name="company" required autocomplete="organization"></label>
+          <label class="field">Industry
+            <select name="industry"><option value="cleaning">Commercial cleaning</option><option value="pest-control">Pest control</option><option value="maintenance">Facility maintenance</option><option value="repair">Repair &amp; trades</option><option value="other">Other</option></select>
+          </label>
+        </div>
+        <label class="field">Technicians in the field
+          <select name="fleetSize"><option>1–10</option><option>11–50</option><option>51–200</option><option>200+</option></select>
+        </label>
+        <label class="field">What would you like to verify?<textarea name="message" rows="3"></textarea></label>
+        <button class="btn btn-primary" style="width:100%" type="submit">Request a demo</button>
+        <p class="small muted" id="lead-status" style="margin:.8em 0 0" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <span>© 2026 RouteProof (demonstration build)</span>
+      <span><a href="/app" style="color:inherit">Dashboard</a> · <a href="/tech" style="color:inherit">Technician app</a> · <a href="#integrity" style="color:inherit">Evidence integrity</a></span>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/site.js"></script>
+</body>
+</html>

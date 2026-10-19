@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RouteProof Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f7bff'/%3E%3Cpath d='M9 17l5 5 9-11' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body class="app">
+  <div class="demo-ribbon"><strong>Demo workspace.</strong> Records marked "Demo" are fictional. S3, Bedrock, Lambda and HubSpot run in simulated mode unless configured — see Integrations.</div>
+  <aside class="side" id="side">
+    <a class="logo" href="/"><span class="logo-mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4 10-11"/></svg></span>RouteProof</a>
+    <div class="group">Operations</div>
+    <a class="nav" href="#/overview" data-r="overview">Overview</a>
+    <a class="nav" href="#/work-orders" data-r="work-orders">Work orders</a>
+    <a class="nav" href="#/queue" data-r="queue">Verification queue <span class="count" id="queue-count"></span></a>
+    <a class="nav" href="#/technicians" data-r="technicians">Technician assignments</a>
+    <a class="nav" href="#/disputes" data-r="disputes">Disputes <span class="count" id="dispute-count"></span></a>
+    <div class="group">Records</div>
+    <a class="nav" href="#/directory" data-r="directory">Customers &amp; locations</a>
+    <a class="nav" href="#/history" data-r="history">Service history</a>
+    <a class="nav" href="#/reports" data-r="reports">Reports</a>
+    <a class="nav" href="#/insights" data-r="insights">Recurring issues</a>
+    <div class="group">System</div>
+    <a class="nav" href="#/integrations" data-r="integrations">Integrations</a>
+    <a class="nav" href="/tech" target="_blank" rel="noopener">Technician app ↗</a>
+    <div class="foot">Signed in as demo workspace.<br><a href="#" id="reset-demo">Reset demo data</a></div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="btn btn-ghost btn-sm menu-btn" id="menu-btn" aria-label="Open navigation">☰</button>
+      <h1 id="page-title">Overview</h1>
+      <div class="right">
+        <label class="who">Reviewing as <input type="text" id="reviewer" aria-label="Reviewer name"></label>
+        <button class="btn btn-primary btn-sm" id="new-wo">+ Work order</button>
+      </div>
+    </header>
+    <main class="content" id="view"></main>
+  </div>
+  <dialog id="dlg"></dialog>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
