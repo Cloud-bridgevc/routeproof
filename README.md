@@ -57,3 +57,16 @@ HUBSPOT_PRIVATE_APP_TOKEN=...    # demo-request sync
 ```
 
 Data is stored in SQLite at `data/routeproof.db` (created and seeded on first run). Evidence, reviews, sign-offs, notes, dispute events and reports are append-only, enforced by database triggers. You can inspect it with `sqlite3 data/routeproof.db`.
+
+## Launch readiness (glow-up)
+
+- Home page: problem section with three sourced statistics, what-we-solve, comparison table, AI section, roadmap, team and FAQ, with scroll-reveal motion that respects reduced motion (`public/css/glow.css`, `glow.js`).
+- New pages: `/privacy.html`, `/terms.html` (review drafts). Footer credits the founders.
+- Ship assets: OG image, icons, favicon, manifest, sitemap, robots, founders JSON-LD; the server now serves `.xml` and `.txt`.
+- Dashboard: fixed horizontal overflow on phones (grid columns can shrink, tables scroll).
+
+### Content to confirm before launch
+- **Founders are placeholders:** Segun Bakare (Founder/CEO) and Nneka Chukwu (Co-founder/CTO) — replace in `public/index.html` (team section, footer) and the JSON-LD.
+- Contact email `hello@routeproof.site` is a placeholder — create the forward or replace it.
+- Statistics (Trimble/OnePoll via Field Technologies Online; US BLS OEWS) — re-check figures and links.
+- Privacy notice and terms need operator details and governing law.
